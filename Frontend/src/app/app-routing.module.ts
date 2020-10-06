@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
-import { TestpageComponent } from './testpage/testpage.component';
+import { AccountLoginComponent } from './account/account-login/account-login.component';
+import { TaskViewComponent } from './task/task-view/task-view.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'rtest', component: AppComponent },
-  { path: 'test', component: TestpageComponent },
+  { path: '', component: AccountLoginComponent },
+  { path: 'list', component: TaskViewComponent },
 ];
 
 @NgModule({

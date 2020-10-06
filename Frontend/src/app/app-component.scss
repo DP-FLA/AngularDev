@@ -1,0 +1,42 @@
+#centered
+{
+    margin: 0 auto;
+    background-color: #1E1E1E;
+    width: 40%;
+    max-width: 700px;
+}
+
+@media only screen and (max-width: 1400px) {
+    #centered
+    {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #centered
+    {
+        width: 55%;
+    }
+}
+  
+@media only screen and (max-width: 1000px) {
+    #centered
+    {
+        width: 70%;
+    }
+  }
+
+@media only screen and (max-width: 800px) {
+    #centered
+    {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #centered
+    {
+        width: 100%;
+    }
+}

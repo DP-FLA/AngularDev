@@ -1,24 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TestpageComponent } from './testpage/testpage.component';
-import { MaterialModule } from './material/material.module';
+import { MaterialModule } from './material.module';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import { TaskViewComponent } from './task-view/task-view.component';
-import { TaskAddComponent, DialogOverviewExampleDialog } from './task-add/task-add.component';
-import { AccountLoginComponent } from './account-login/account-login.component';
-import { AccoutRegistrationComponent } from './accout-registration/accout-registration.component';
-import { AccountDeletionComponent } from './account-deletion/account-deletion.component';
-import { TaskEditComponent } from './task-edit/task-edit.component';
+import { AppComponent } from './app-component' ;
+// Task components
+import { TaskViewComponent } from './task/task-view/task-view.component';
+import { TaskAddComponent, DialogOverviewExampleDialog } from './task/task-add/task-add.component';
+import { TaskEditComponent } from './task/task-edit/task-edit.component';
+// Account components
+import { AccountLoginComponent } from './account/account-login/account-login.component';
+import { AccountRegistrationComponent } from './account/account-registration/account-registration.component';
+import { AccountDeletionComponent } from './account/account-deletion/account-deletion.component';
 
 @NgModule({
-  declarations: [AppComponent, TestpageComponent, TaskViewComponent, TaskAddComponent, DialogOverviewExampleDialog, AccountLoginComponent, AccoutRegistrationComponent, AccountDeletionComponent, TaskEditComponent],
+  declarations: [AppComponent, AccountLoginComponent, AccountRegistrationComponent, AccountDeletionComponent, TaskViewComponent, TaskAddComponent, DialogOverviewExampleDialog,TaskEditComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -37,4 +37,5 @@ import { TaskEditComponent } from './task-edit/task-edit.component';
   ],
   bootstrap: [AppComponent],
 })
+
 export class AppModule {}
