@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Todo:</h1>
+<div mat-dialog-content>
+  <p>Was muss erledigt werden:</p>
+  <mat-form-field>
+    <mat-label>Beschreibung</mat-label>
+    <input matInput [(ngModel)]="data.text">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Abbruch</button>
+  <button mat-button [mat-dialog-close]="data.text" cdkFocusInitial>Speichern</button>
+</div>
