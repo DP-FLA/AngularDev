@@ -1,2 +1,26 @@
-<p>account-login works!</p>
-      <h1>Test</h1>
+<mat-tab-group>
+      <mat-tab label="Anmelden">
+            <form style="width:60%; margin-left:20%;">
+                  <br>
+                  <mat-form-field appearance="fill" style="width:100%;">
+                        <mat-label>Anmeldename</mat-label>
+                        <input matInput type="text">
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field appearance="fill" style="width:100%;">
+                        <mat-label>Passwort</mat-label>
+                        <input matInput type="password">
+                        <button mat-icon-button matSuffix>
+                        <mat-icon>visibility_off</mat-icon>
+                        </button>
+                  </mat-form-field>
+                  <br>
+                  <button mat-raised-button color="primary" style="width: 40%;">Login</button>
+            </form>
+      </mat-tab>
+      <mat-tab label="Registrieren"><app-account-registration></app-account-registration></mat-tab>
+      <mat-tab label="Account Löschen"><app-account-deletion></app-account-deletion></mat-tab>
+      <mat-tab label="FAQ">FAQ</mat-tab>
+</mat-tab-group>
+<br>
+<br>

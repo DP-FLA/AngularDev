@@ -7,6 +7,10 @@
 # Projektbeschhreibung
 Eine "TODO-Liste" welche mehrere Benutzer haben kann, welche alle eine eigene Liste haben.
 
+![N|Solid](./Assets/1.png)
+
+![N|Solid](./Assets/2.png)
+
 # Gliederung
 Das Projekt ist wie folgt gegliedert:
 
