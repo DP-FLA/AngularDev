@@ -1,8 +1,11 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Task } from '../Task';
+import { TaskManagerService } from '../task-manager.service';
 
 export interface DialogData {
   text: string;
+  date: string;
 }
 
 @Component({
@@ -12,19 +15,22 @@ export interface DialogData {
 })
 export class TaskAddComponent implements OnInit {
   text: string;
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private taskManager: TaskManagerService) { }
 
   ngOnInit(): void {
   }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '250px',
+      width: '350px',
       data: {text: this.text}
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.text = result;
+      if (result.text != null && result.date != null)
+      {
+        this.taskManager.addTask({ id: 99, text:result.text, dueto: new Date(result.date) });
+      }
     });
   }
 }

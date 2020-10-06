@@ -1,12 +1,20 @@
 <h1 mat-dialog-title>Todo:</h1>
 <div mat-dialog-content>
   <p>Was muss erledigt werden:</p>
-  <mat-form-field>
+  <mat-form-field appearance="fill" style="width:300px;">
     <mat-label>Beschreibung</mat-label>
     <input matInput [(ngModel)]="data.text">
   </mat-form-field>
+  <mat-form-field appearance="fill" style="width:300px;">
+    <mat-label>Bis wann:</mat-label>
+  <!-- #docregion toggle -->
+    <input matInput [matDatepicker]="picker" [(ngModel)]="data.date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  <!-- #enddocregion toggle -->
+  </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Abbruch</button>
-  <button mat-button [mat-dialog-close]="data.text" cdkFocusInitial>Speichern</button>
+  <button mat-button (click)="onNoClick()">Abbrechen</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Speichern</button>
 </div>

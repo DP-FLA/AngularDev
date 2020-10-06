@@ -17,11 +17,6 @@ export class TaskViewComponent implements OnInit {
     .subscribe(tasks => this.tasks = tasks);
   }
 
-  addTask(): void {
-    // TODO: Input adden
-   this.taskManager.addTask({ id: 99, text: 'random', dueto: new Date('2020-12-31T00:00:00') });
-  }
-  
   deleteTask(task: Task): void {
    this.taskManager.removeTask(task);
   }
