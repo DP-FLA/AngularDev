@@ -12,9 +12,13 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { TaskViewComponent } from './task-view/task-view.component';
 import { TaskAddComponent, DialogOverviewExampleDialog } from './task-add/task-add.component';
+import { AccountLoginComponent } from './account-login/account-login.component';
+import { AccoutRegistrationComponent } from './accout-registration/accout-registration.component';
+import { AccountDeletionComponent } from './account-deletion/account-deletion.component';
+import { TaskEditComponent } from './task-edit/task-edit.component';
 
 @NgModule({
-  declarations: [AppComponent, TestpageComponent, TaskViewComponent, TaskAddComponent, DialogOverviewExampleDialog],
+  declarations: [AppComponent, TestpageComponent, TaskViewComponent, TaskAddComponent, DialogOverviewExampleDialog, AccountLoginComponent, AccoutRegistrationComponent, AccountDeletionComponent, TaskEditComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
